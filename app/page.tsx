@@ -3,28 +3,28 @@ const rooms = [
     name: "Gallery",
     note: "Selected work from personal Studios.",
     href: "https://gallery.nebari.com.au",
-    mark: "G",
+    image: "/gallery.png",
     tone: "gallery",
   },
   {
     name: "Kitchen",
     note: "Recipes to cook one step at a time.",
     href: "https://kitchen.nebari.com.au",
-    mark: "K",
+    image: "/kitchen.png",
     tone: "kitchen",
   },
   {
     name: "Studio",
     note: "Quiet corners for meaningful work.",
     href: "https://studio.nebari.com.au",
-    mark: "S",
+    image: "/studio.png",
     tone: "studio",
   },
   {
     name: "Library",
     note: "Books read, remembered and freely shared.",
     href: "https://library.nebari.com.au",
-    mark: "L",
+    image: "/library.png",
     tone: "library",
   },
 ];
@@ -44,11 +44,11 @@ export default function Home() {
         <div className="intro">
           <p className="eyebrow">The Nebari rooms</p>
           <h1 id="gateway-title">Choose a doorway.</h1>
-          <p>Stories, art, food, working spaces and books—each with a life of its own, growing from the same roots.</p>
+          <p>Stories, art, food, working spaces, books and wellbeing—each with a life of its own, growing from the same roots.</p>
         </div>
 
         <a className="legend-card" href="https://local-legend.com.au">
-          <span className="legend-mark" aria-hidden="true">LL</span>
+          <img className="featured-image" src="/local-legend.png" alt="" />
           <span className="card-copy">
             <span className="card-kicker">Stories held in place</span>
             <strong>Local Legend</strong>
@@ -60,7 +60,7 @@ export default function Home() {
         <div className="room-grid">
           {rooms.map((room) => (
             <a className={`room-card ${room.tone}`} href={room.href} key={room.name}>
-              <span className="room-mark" aria-hidden="true">{room.mark}</span>
+              <img className="room-image" src={room.image} alt="" />
               <span className="card-copy">
                 <strong>{room.name}</strong>
                 <span>{room.note}</span>
@@ -69,6 +69,16 @@ export default function Home() {
             </a>
           ))}
         </div>
+
+        <a className="peace-card" href="https://peacewithin.nebari.com.au">
+          <span className="peace-motif" aria-hidden="true"><i /><i /><i /></span>
+          <span className="card-copy">
+            <span className="card-kicker">Space to return to yourself</span>
+            <strong>Peace Within</strong>
+            <span>Gentle Access Bars and energy-clearing sessions on the Sunshine Coast.</span>
+          </span>
+          <span className="arrow" aria-hidden="true">↗</span>
+        </a>
       </section>
 
       <footer>
