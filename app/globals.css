@@ -48,6 +48,7 @@ a:hover .arrow { transform: translate(2px,-2px); }
 .room-card .card-copy { max-width: 64%; }
 .room-card .card-copy strong { font-size: clamp(1.8rem,4vw,2.65rem); }
 .room-image { position: absolute; right: 14px; top: 50%; width: 150px; height: 150px; transform: translateY(-50%); object-fit: cover; border-radius: 12%; box-shadow: 0 9px 24px rgba(38,52,44,.11); }
+.room-card.gallery .room-image { right: 12px; width: 210px; height: 210px; }
 .gallery { background: #e8ece3; }
 .kitchen { background: #efe2d2; }
 .studio { background: #e6e0d8; }
@@ -67,6 +68,7 @@ footer { padding-top: 22px; border-top: 1px solid var(--line); }
   .room-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
   .room-card { min-height: 185px; padding: 22px; }
   .room-image { width: 125px; height: 125px; right: 10px; }
+  .room-card.gallery .room-image { right: -8px; width: 175px; height: 175px; }
   .room-card .card-copy { max-width: 58%; }
   footer { align-items: flex-start; gap: 8px; flex-direction: column; }
 }
